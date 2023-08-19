@@ -1,1 +1,56 @@
-<p>header works!</p>
+<div class="header d-flex justify-content-between">
+    <img src="../../../assets/logo.png" alt="Logo" class="header_logo" />
+    <nav class="ms-5 d-flex justify-content-around">
+        <div class="d-flex justify-content-between nav_titles">
+            <ul>
+                <li>
+                    <a>Home</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a>Services</a><i class="fa-solid fa-angle-down mx-2 align-middle" style="color: #000000;"></i>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a>Portfolio</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a>About Us</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a>Careers</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a>Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" (click)="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="backdrop" [ngClass]="{ 'active': isMenuOpen }">
+                <i class="fa-solid fa-x fa-xl d-flex justify-content-end mt-5 me-md-5"
+                    style="color: #ffffff;cursor: pointer;" (click)="closeMenu()"></i>
+                <ul class="menu-items" [ngClass]="{ 'active': isMenuOpen }">
+                    <li><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Careers</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

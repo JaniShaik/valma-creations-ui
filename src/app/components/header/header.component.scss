@@ -1,0 +1,170 @@
+.header {
+    margin: 33px 0 0 33px;
+}
+
+.header_logo {
+    width: 177px;
+    height: 30px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 1;
+    font-weight: bold;
+    color: black;
+}
+
+.dropdown {
+    float: right;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -170px;
+    z-index: 1000;
+    background-color: aqua;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 10px !important;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: -20px;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 68px;
+    margin-right: 50px;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #7A217F;
+    opacity: 0.94;
+    display: none;
+    z-index: 1;
+}
+
+.backdrop.active {
+    display: block;
+    width: 100%;
+}
+
+.menu-items {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.94;
+    display: none;
+    z-index: 2;
+}
+
+.menu-items {
+    a {
+        font-size: 58px;
+        color: #FFFFFF;
+    }
+}
+
+.menu-items.active {
+    display: block;
+}
+
+//Media queries For laptop size 1024
+@media screen and (max-width: 1024px) {
+    a {
+        font-size: 10px;
+    }
+
+    .menu-items {
+        a {
+            font-size: 28px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    .menu-items {
+        a {
+            font-size: 38px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+// Media queries for Tab
+@media screen and (max-width: 768px) {
+    a {
+        display: none;
+    }
+
+    .backdrop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(238, 27, 27, 0.8);
+    }
+
+    .menu-items {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 300px;
+        padding: 20px;
+        display: block;
+        z-index: 2;
+    }
+
+    .menu-items {
+        a {
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+    }
+}
